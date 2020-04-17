@@ -377,4 +377,101 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #000000be;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  padding: 0;
+  margin: 0.8em 0;
+}
+
+nav ul li {
+  list-style: none;
+  margin-right: 3em;
+}
+
+nav ul li a {
+  font-weight: bold;
+  color: white;
+  border: 3px solid white;
+  padding: 0.5em 1em;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+nav ul li a:hover {
+  text-decoration: none;
+  border: 3px solid rgba(0, 0, 0, 0);
+  border-bottom: 3px solid white;
+}
+
+#welcome-section {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#welcome-section h1, #welcome-section h2 {
+  text-align: center;
+  margin: 0.2em;
+}
+
+#welcome-section h1 {
+  font-size: 7rem;
+  font-weight: 900;
+  letter-spacing: 7vw;
+  background-image: url(https://cdn.pixabay.com/photo/2016/06/02/02/33/triangles-1430105_960_720.png);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#welcome-section h2 {
+  font-size: 2.5rem;
+  color: #333333;
+}
+
+#projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 30vh;
+  background-color: #333333;
+  padding: 5em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#projects a {
+  margin: auto;
+  color: white;
+  font-size: 1.1rem;
+}
+
+#projects a img {
+  width: 25vw;
+  display: block;
+}
 /*# sourceMappingURL=style.css.map */
