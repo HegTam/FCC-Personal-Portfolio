@@ -376,7 +376,6 @@ a {
 
 a:hover, a:focus {
   text-decoration: underline;
-  outline: none;
 }
 
 nav {
@@ -415,6 +414,7 @@ nav ul li a:hover, nav ul li a:focus {
   text-decoration: none;
   border: 3px solid rgba(0, 0, 0, 0);
   border-bottom: 3px solid white;
+  outline: none;
 }
 
 #welcome-section {
@@ -454,12 +454,10 @@ nav ul li a:hover, nav ul li a:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   min-height: 30vh;
   background-color: #333333;
-  padding: 5em;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -469,6 +467,7 @@ nav ul li a:hover, nav ul li a:focus {
   margin: auto;
   color: white;
   font-size: 1.1rem;
+  text-align: center;
 }
 
 #projects a img {
