@@ -23,15 +23,40 @@
 #projects
     display: flex
     justify-content: space-around
-    min-height: 30vh
     background-color: #333333
     align-items: center
-        
+
+    article
+        margin: 1em
+        a
+            margin: auto
+            color: white
+            font-size: 1.1rem
+            text-align: center
+            img
+                display: block
+
+#contact
+    margin: 1em
+    display: grid
+    grid-template-rows: auto auto
+    grid-template-columns: repeat(3, 1fr)
+    grid-template-area: "social" "contactform"
+    justify-content: justify
     a
+        display: block
         margin: auto
-        color: white
-        font-size: 1.1rem
-        text-align: center
+        grid-row: 1/2
         img
-            width: 25vw
+            width: 5vw
+            margin: 1em
+    form
+        display: block
+        margin: auto
+        grid-row: 2/3
+        grid-column: 2/3
+        label, input, textarea
             display: block
+        textarea
+            resize: vertical
+        

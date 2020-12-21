@@ -369,6 +369,12 @@ html {
   outline: 0;
 }
 
+footer {
+  background-color: grey;
+  padding: 1em;
+  font-size: 0.4em;
+}
+
 a {
   color: #0080b3;
   text-decoration: none;
@@ -376,6 +382,30 @@ a {
 
 a:hover, a:focus {
   text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  #projects {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #projects article a img {
+    width: 80vw;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  #projects {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  #projects article a img {
+    width: 25vw;
+  }
 }
 
 nav {
@@ -456,22 +486,70 @@ nav ul li a:hover, nav ul li a:focus {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  min-height: 30vh;
   background-color: #333333;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-#projects a {
+#projects article {
+  margin: 1em;
+}
+
+#projects article a {
   margin: auto;
   color: white;
   font-size: 1.1rem;
   text-align: center;
 }
 
-#projects a img {
-  width: 25vw;
+#projects article a img {
   display: block;
+}
+
+#contact {
+  margin: 1em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-template-area: "social" "contactform";
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: justify;
+}
+
+#contact a {
+  display: block;
+  margin: auto;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+#contact a img {
+  width: 5vw;
+  margin: 1em;
+}
+
+#contact form {
+  display: block;
+  margin: auto;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+}
+
+#contact form label, #contact form input, #contact form textarea {
+  display: block;
+}
+
+#contact form textarea {
+  resize: vertical;
 }
 /*# sourceMappingURL=style.css.map */
